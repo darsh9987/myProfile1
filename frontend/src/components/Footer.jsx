@@ -47,12 +47,12 @@ const Footer = () => {
             </div>
             <p className="text-gray-300 mb-4 leading-relaxed">
               Transforming complex business challenges into elegant technical solutions 
-              with 15+ years of enterprise development expertise.
+              with 16+ years of enterprise development expertise.
             </p>
             <div className="flex space-x-4">
               <motion.a
                 whileHover={{ scale: 1.1 }}
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/dfulfagar/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-colors"
@@ -61,7 +61,7 @@ const Footer = () => {
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.1 }}
-                href="https://github.com"
+                href="https://github.com/darsh9987/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-gray-700 transition-colors"
@@ -70,7 +70,8 @@ const Footer = () => {
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.1 }}
-                href={`mailto:${portfolioData.personal.email}`}
+                //href={`mailto:${portfolioData.personal.email}`}
+                href={`mailto:DFulfagar@gmail.com`} // Updated to avoid spam bots
                 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors"
               >
                 <Mail className="w-5 h-5" />

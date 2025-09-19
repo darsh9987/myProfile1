@@ -29,10 +29,10 @@ const Hero = () => {
   };
 
   const stats = [
-    { icon: Code2, label: "Years Experience", value: "15+" },
-    { icon: Users, label: "Enterprise Clients", value: "50+" },
+    { icon: Code2, label: "Years Experience", value: "16+" },
+    { icon: Users, label: "Enterprise Clients", value: "10+" },
     { icon: Target, label: "Success Rate", value: "99%" },
-    { icon: Zap, label: "Projects Delivered", value: "100+" }
+    { icon: Zap, label: "Projects Delivered", value: "50+" }
   ];
 
   return (

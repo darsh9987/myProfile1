@@ -10,6 +10,7 @@ import { Label } from './ui/label';
 import { useToast } from '../hooks/use-toast';
 import { portfolioApi } from '../services/api';
 import { portfolioData } from '../data/mock';
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -47,11 +48,25 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await portfolioApi.submitContact(formData);
+      //const response = await portfolioApi.submitContact(formData);
+      const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      subject: formData.subject,
+      message: formData.message,
+    };
+      const response = await emailjs.send(
+        'service_s6kho7e', // Replace with your EmailJS service ID
+        'template_d2u7n4s', // Replace with your EmailJS template ID
+        templateParams,
+        'xFncG3x_rdulh0WzF' // Replace with your EmailJS public key
+      );
+      console.log('EmailJS response:', response);
       
       toast({
         title: "Message Sent Successfully!",
-        description: response.message || "Thank you for reaching out. I'll get back to you within 24 hours.",
+        description: response.message || "Thank you for reaching out. I'll get back to you earliest possible.",
       });
       
       // Reset form
@@ -79,7 +94,8 @@ const Contact = () => {
       title: "Email",
       value: portfolioData.personal.email,
       description: "Drop me a line anytime",
-      action: `mailto:${portfolioData.personal.email}`
+      //action: `mailto:${portfolioData.personal.email}`
+      action: `mailto:DFulfagar@gmail.com`  // Updated to avoid spam bots
     },
     {
       icon: Phone,
@@ -170,7 +186,7 @@ const Contact = () => {
                     variant="outline"
                     size="sm"
                     className="flex items-center space-x-2"
-                    onClick={() => window.open('https://linkedin.com', '_blank')}
+                    onClick={() => window.open('https://www.linkedin.com/in/dfulfagar', '_blank')}
                   >
                     <Linkedin className="w-4 h-4" />
                     <span>LinkedIn</span>
@@ -179,7 +195,7 @@ const Contact = () => {
                     variant="outline"
                     size="sm"
                     className="flex items-center space-x-2"
-                    onClick={() => window.open('https://github.com', '_blank')}
+                    onClick={() => window.open('https://github.com/darsh9987', '_blank')}
                   >
                     <Github className="w-4 h-4" />
                     <span>GitHub</span>

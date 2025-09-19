@@ -8,7 +8,9 @@ import { portfolioData } from '../data/mock';
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState(Object.keys(portfolioData.skills.technical)[0]);
-
+  const [activeTab, setActiveTab] = useState("technical"); // Add state for active tab
+  //const [activeTab, setActiveTab] = useState("leadership"); // Add state for active tab
+  //const [activeTab, setActiveTab] = useState("certifications"); // Add state for active tab
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -54,7 +56,7 @@ const Skills = () => {
             </p>
           </motion.div>
 
-          <Tabs defaultValue="technical" className="w-full">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto mb-12">
               <TabsTrigger value="technical">Technical</TabsTrigger>
               <TabsTrigger value="leadership">Leadership</TabsTrigger>

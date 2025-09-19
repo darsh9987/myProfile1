@@ -73,7 +73,7 @@ const About = () => {
                   <Award className="w-8 h-8 text-yellow-500" />
                   <div>
                     <p className="font-semibold text-gray-900">Certified Expert</p>
-                    <p className="text-sm text-gray-600">Salesforce & Azure</p>
+                    <p className="text-sm text-gray-600">Salesforce & Generative AI</p>
                   </div>
                 </div>
               </motion.div>

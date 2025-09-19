@@ -5,7 +5,7 @@ export const portfolioData = {
     title: "Senior Principal Consultant",
     subtitle: "Enterprise Solutions Architect • CRM Specialist • Technical Leader",
     tagline: "Transforming complex business challenges into elegant technical solutions with 16+ years of expertise",
-    email: "DFulfagar@gmail.com",
+    email: "DFulfagar at gmail dot com",
     phone: "+91 7888 009987",
     location: "Pune, Maharashtra, India",
     heroImage: "/assets/images/heroImage.jpg",
@@ -17,11 +17,12 @@ export const portfolioData = {
     description: "With over 16 years of experience in software development and technical leadership, I specialize in architecting enterprise-grade solutions that drive business transformation. My expertise spans from Salesforce CRM ecosystems to full-stack development, with a proven track record of delivering scalable solutions across telecom, banking, and wealth management industries.",
     highlights: [
       "16+ years of hands-on software development and technical leadership",
+      "Certified Generative AI Specialist from IIT Delhi",
       "Certified Salesforce Administrator and Platform Developer",
       "Expert in enterprise architecture and microservices design",
       "Led cross-functional teams across multiple continents",
       "Delivered solutions for Fortune 500 companies",
-      "Specialized in CRM integrations and automation"
+      "Specialized in CRM integrations, Artificial Intelligence and automation"
     ],
     philosophy: "I believe in building solutions that not only meet technical requirements but also enhance user experience and drive business growth. Every line of code should serve a purpose, every architecture should scale, and every solution should empower people to work smarter."
   },
@@ -36,14 +37,14 @@ export const portfolioData = {
       type: "leadership",
       description: "Leading end-to-end Salesforce CRM development and enterprise solution architecture for wealth management organizations across multiple regions.",
       achievements: [
-        "Architected and delivered Siebel CRM IP17 solution for Investment Banking clients in Jersey (UK)",
-        "Led implementation of custom REST-based integration applications for Java Business Services",
-        "Designed enterprise architecture with microservices, handling millions of business documents",
-        "Successfully migrated legacy systems to modern cloud-based solutions on Microsoft Azure",
-        "Managed multiple POCs across Salesforce, Microsoft Azure, and API Management platforms",
+        "Architected and delivered Siebel CRM IP17 solution for Investment Banking client in Jersey (Channel Islands, UK)",
+        "Led implementation of custom REST-based integration applications using Java Business Services in Siebel CRM",
+        "Designed enterprise architecture with IBM Content Manager, handling millions of business documents",
+        "Successfully migrated legacy systems to modern cloud-based solutions on Salesfoce CRM",
+        "Managed multiple POCs across Salesforce, Microsoft Azure, and Microsoft API Management platforms",
         "Implemented DevOps practices with Jenkins, reducing deployment time by 60%"
       ],
-      technologies: ["Salesforce CRM", "Siebel CRM", "Microsoft Azure", "Java", "REST APIs", "Jenkins", "Power BI", "SSIS/SSRS"]
+      technologies: ["Generative AI", "Salesforce CRM", "Siebel CRM", "IBM Content Manager", "Java", "REST APIs", "Jenkins", "Power BI", "SSIS/SSRS"]
     },
     {
       id: 2,
@@ -56,11 +57,11 @@ export const portfolioData = {
       achievements: [
         "Developed two secured Siebel IP15 & IP17 CRM solutions for Core Banking in Dubai (UAE)",
         "Built highly scalable CRM solutions using island principles and microservices architecture",
-        "Integrated WhatsApp, SalesARM CRM, MeMobile and Finacle for seamless customer experience",
+        "Integrated WhatsApp, SalesARM CRM, MeMobile and Finacle for seamless customer experience with Siebel CRM",
         "Implemented advanced security protocols for banking-grade applications",
         "Led agile development teams across multiple time zones"
       ],
-      technologies: ["Siebel CRM", "Core Banking Systems", "WhatsApp API", "Microservices", "Security Protocols"]
+      technologies: ["Siebel CRM", "Core Banking Systems", "WhatsApp API Integration", "Microservices Integration", "Security Protocols"]
     },
     {
       id: 3,
@@ -117,12 +118,12 @@ export const portfolioData = {
 
   skills: {
     technical: {
-      "CRM Platforms": ["Salesforce CRM", "Siebel CRM", "Oracle CRM", "Microsoft Dynamics"],
+      "CRM Platforms": ["Salesforce CRM", "Siebel CRM", "Microsoft Dynamics"],
       "Enterprise Integration": ["REST APIs", "SOAP Web Services", "SAP BAPI", "JMS Queues", "MuleSoft"],
       "Cloud Platforms": ["Microsoft Azure", "AWS", "Google Cloud Platform"],
       "Programming": ["Java", "JavaScript", "Python", "C#", ".NET", "Node.js"],
       "Frontend Technologies": ["React.js", "Angular", "Vue.js", "HTML5", "CSS3", "TypeScript"],
-      "Databases": ["SQL Server", "Oracle", "MongoDB", "PostgreSQL", "MySQL"],
+      "Databases": ["DB2", "SQL Server", "Oracle", "MongoDB", "PostgreSQL", "MySQL"],
       "DevOps & Tools": ["Jenkins", "Git", "Docker", "Kubernetes", "Azure DevOps"],
       "Business Intelligence": ["Power BI", "Tableau", "Alteryx", "SSIS", "SSRS"]
     },
@@ -138,15 +139,22 @@ export const portfolioData = {
     ],
     certifications: [
       "Salesforce Certified Administrator",
-      "Salesforce Platform Developer I"
+      "Salesforce Platform Developer I",
+      "IIT Delhi Certificate Programme in Generative AI"
     ]
   },
 
   achievements: [
     {
-      title: "Valuable Team Player Award",
+      title: "You Made a Difference Award",
       description: "Recognized for exceptional contributions to Persistent Systems Ltd.",
       year: "2014",
+      category: "recognition"
+    },
+    {
+      title: "Valuable Team Player Award",
+      description: "Recognized for exceptional contributions to Tech Mahindra Ltd.",
+      year: "2011",
       category: "recognition"
     },
     {
@@ -160,17 +168,23 @@ export const portfolioData = {
       description: "First place twice in Paper Presentation Contest across multiple college events",
       year: "2008-2009", 
       category: "academic"
-    },
+    },/*
     {
       title: "Best Coders Finalist",
       description: "Finalist in Best Coders competition at Saga 2008 (MESCOE Inter College Event)",
       year: "2008",
       category: "technical"
-    },
+    },*/
     {
       title: "Cricket & Basketball Champion",
       description: "Winner in multiple college tournaments demonstrating leadership and teamwork",
       year: "2007-2009",
+      category: "sports"
+    },
+    {
+      title: "Cricket Division 2 T20 League Man of the Match",
+      description: "Recognized as Man of the Match in Division 2 Cricket Tournament for International Royals Club in Jersey in a winning cause",
+      year: "2024",
       category: "sports"
     }
   ],
