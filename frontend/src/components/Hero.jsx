@@ -10,7 +10,7 @@ const Hero = () => {
   const titles = [
     "Enterprise Solutions Architect",
     "CRM Specialist & Technical Leader", 
-    "Salesforce Development Expert",
+    "Generative AI Certified from IIT Delhi",
     "Full-Stack Innovation Engineer"
   ];
 

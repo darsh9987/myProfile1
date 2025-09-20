@@ -38,14 +38,14 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+        <div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={containerVariants}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
+          <div variants={itemVariants} className="text-center mb-16">
             <Badge className="bg-purple-100 text-purple-800 mb-4">Technical Expertise</Badge>
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Skills & Technologies
@@ -54,8 +54,8 @@ const Skills = () => {
               A comprehensive toolkit built through years of hands-on experience with enterprise-grade 
               technologies and modern development practices.
             </p>
-          </motion.div>
-
+          </div>
+          
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto mb-12">
               <TabsTrigger value="technical">Technical</TabsTrigger>
@@ -63,10 +63,11 @@ const Skills = () => {
               <TabsTrigger value="certifications">Certifications</TabsTrigger>
             </TabsList>
 
-            <TabsContent value="technical">
+            <TabsContent key="technical" value="technical">
+              {/*console.log("Rendering Technical Tab")*/}
               <div className="grid lg:grid-cols-3 gap-8">
-                {/* Categories Sidebar */}
-                <motion.div variants={itemVariants} className="lg:col-span-1">
+                
+                <div variants={itemVariants} className="lg:col-span-1">
                   <Card>
                     <CardHeader>
                       <CardTitle className="text-lg">Skill Categories</CardTitle>
@@ -102,10 +103,10 @@ const Skills = () => {
                       </div>
                     </CardContent>
                   </Card>
-                </motion.div>
+                </div>
 
-                {/* Skills Display */}
-                <motion.div variants={itemVariants} className="lg:col-span-2">
+                
+                <div variants={itemVariants} className="lg:col-span-2">
                   <Card>
                     <CardHeader>
                       <CardTitle className="flex items-center space-x-2">
@@ -144,12 +145,13 @@ const Skills = () => {
                       </div>
                     </CardContent>
                   </Card>
-                </motion.div>
+                </div>
               </div>
             </TabsContent>
 
-            <TabsContent value="leadership">
-              <motion.div variants={containerVariants} className="grid md:grid-cols-2 gap-6">
+            <TabsContent key="leadership" value="leadership">
+              {/*console.log("Rendering Leadership Tab")*/}
+              <div variants={containerVariants} className="grid md:grid-cols-2 gap-6">
                 {portfolioData.skills.leadership.map((skill, index) => (
                   <motion.div key={skill} variants={itemVariants}>
                     <Card className="h-full hover:shadow-lg transition-shadow">
@@ -169,11 +171,12 @@ const Skills = () => {
                     </Card>
                   </motion.div>
                 ))}
-              </motion.div>
+              </div>
             </TabsContent>
 
-            <TabsContent value="certifications">
-              <motion.div variants={containerVariants} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <TabsContent key="certifications" value="certifications">
+              {/*console.log("Rendering Certifications Tab")*/}
+              <div variants={containerVariants} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {portfolioData.skills.certifications.map((cert, index) => (
                   <motion.div key={cert} variants={itemVariants}>
                     <Card className="h-full hover:shadow-lg transition-shadow">
@@ -187,10 +190,11 @@ const Skills = () => {
                     </Card>
                   </motion.div>
                 ))}
-              </motion.div>
+              </div>
             </TabsContent>
+            
           </Tabs>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
