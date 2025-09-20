@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, MapPin, ExternalLink, Briefcase, Code, Users, Lightbulb } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
@@ -6,6 +6,9 @@ import { Badge } from './ui/badge';
 import { portfolioData } from '../data/mock';
 
 const Experience = () => {
+
+  const [expanded, setExpanded] = useState({}); // Track expanded state for each experience
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -41,6 +44,13 @@ const Experience = () => {
     }
   };
 
+  const toggleExpanded = (id) => {
+    setExpanded((prev) => ({
+      ...prev,
+      [id]: !prev[id], // Toggle the expanded state for the given id
+    }));
+  };
+
   return (
     <section id="experience" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,7 +80,7 @@ const Experience = () => {
             {portfolioData.experience.map((exp, index) => {
               const Icon = getTypeIcon(exp.type);
               const isEven = index % 2 === 0;
-
+              const isExpanded = expanded[exp.id]; // Check if this experience is expanded
               return (
                 <motion.div
                   key={exp.id}
@@ -119,18 +129,27 @@ const Experience = () => {
                         <div className="mb-4">
                           <h4 className="font-semibold text-gray-900 mb-3">Key Achievements:</h4>
                           <ul className="space-y-2">
-                            {exp.achievements.slice(0, 3).map((achievement, idx) => (
+                            {(isExpanded ? exp.achievements : exp.achievements.slice(0, 3)).map((achievement, idx) => (
                               <li key={idx} className="flex items-start text-sm text-gray-600">
                                 <div className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0" />
                                 {achievement}
                               </li>
                             ))}
-                            {exp.achievements.length > 3 && (
+                            {/*exp.achievements.length > 3 && (
                               <li className="text-sm text-gray-500 italic">
                                 +{exp.achievements.length - 3} more achievements
                               </li>
-                            )}
+                            )*/}
+                            {exp.achievements.length > 3 && (
+                            <button
+                              onClick={() => toggleExpanded(exp.id)}
+                              className="text-sm text-blue-600 hover:underline mt-2"
+                            >
+                              {isExpanded ? 'Show less' : `+${exp.achievements.length - 3} more achievements`}
+                            </button>
+                          )}
                           </ul>
+                          
                         </div>
 
                         {/* Technologies */}
