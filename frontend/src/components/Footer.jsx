@@ -124,7 +124,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-gray-400" />
                 <a
-                  href={`https//wa.me/917888009987`} // Updated to avoid spam bots
+                  href={`https://wa.me/917888009987`} // Updated to avoid spam bots
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   {portfolioData.personal.phone}
